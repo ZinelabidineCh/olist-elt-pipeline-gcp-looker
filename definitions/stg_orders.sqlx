@@ -1,6 +1,10 @@
 config {
     type: "table",
     description: "Cleaning and formatting timestamps for the orders table"
+    assertions: {
+        uniqueKey: ["order_id"],
+        nonNull: ["order_id", "customer_id", "order_status"]
+    }
 }
 
 SELECT
