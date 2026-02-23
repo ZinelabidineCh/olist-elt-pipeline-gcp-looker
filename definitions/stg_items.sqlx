@@ -1,6 +1,6 @@
 config {
     type: "table",
-    description: "Casting prices and shipping limit dates for order items"
+    description: "Casting prices and shipping limit dates for order items",
     assertions: {
         rowConditions: [
             "price >= 0",
