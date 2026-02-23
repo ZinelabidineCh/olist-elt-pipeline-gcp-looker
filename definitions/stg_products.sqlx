@@ -1,6 +1,9 @@
 config {
     type: "table",
     description: "Standardizing product dimensions and weights"
+    assertions: {
+        nonNull: ["product_id", "product_category_name"]
+    }
 }
 
 SELECT
