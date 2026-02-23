@@ -1,6 +1,12 @@
 config {
     type: "table",
     description: "Casting prices and shipping limit dates for order items"
+    assertions: {
+        rowConditions: [
+            "price >= 0",
+            "freight_value >= 0"
+        ]
+    }
 }
 
 SELECT
