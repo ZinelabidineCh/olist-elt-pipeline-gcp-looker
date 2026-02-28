@@ -1,6 +1,0 @@
-{
-    "name": "olist-analytics-pipeline",
-    "dependencies": {
-        "@dataform/core": "3.0.0"
-    }
-}
