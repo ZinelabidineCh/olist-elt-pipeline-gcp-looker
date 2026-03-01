@@ -34,4 +34,4 @@ LEFT JOIN
 LEFT JOIN
   ${ref("stg_products")} AS p ON i.product_id = p.product_id
 
-${when(incremental(), `WHERE o.purchase_at > (SELECT MAX(purchase_at) FROM ${self()})`)}
+${when(incremental(), `WHERE o.purchase_at > TIMESTAMP_SUB((SELECT MAX(purchase_at) FROM ${self()}), INTERVAL 3 DAY)`)}
