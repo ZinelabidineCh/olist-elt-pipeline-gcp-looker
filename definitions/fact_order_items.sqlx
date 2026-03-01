@@ -1,5 +1,6 @@
 config {
     type: "incremental",
+    uniqueKey: ["order_item_id"],
     description: "Final fact table joining items, orders, and products. Optimized with partitioning and clustering.",
     bigquery: {
         partitionBy: "DATE(purchase_at)",
